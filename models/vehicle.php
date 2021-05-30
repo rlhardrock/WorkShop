@@ -18,11 +18,11 @@
         private $motor;
         private $suspension;
         private $service;
-        /* private $settlement; */
+        private $settlement;
 
         //Constructor
 
-        public function __construct($mark,$model,$bodywork,$manufacturing,$enrollment,$license,$paint,$cylinder,$transmission,$motor,$suspension,$service){
+        public function __construct($mark,$model,$bodywork,$manufacturing,$enrollment,$license,$paint,$cylinder,$transmission,$motor,$suspension,$service,$settlement){
             $this->mark=$mark;
             $this->model=$model;
             $this->bodywork=$bodywork;
@@ -35,7 +35,7 @@
             $this->motor=$motor;
             $this->suspension=$suspension;
             $this->service=$service;
-            /* $this->service=$settlement; */
+            $this->settlement=$settlement;
         }
 
      /*    public function addVehicle($POST) {
@@ -43,8 +43,8 @@
             include "../models/databaseConnection.php";
 
             $this->Conexion=connect();
-            $sql= "INSERT INTO vehicles(mark,model,bodywork,manufacturing,enrollment,license,paint,cylinder,transmission,motor,suspension,service)
-                VALUES ('$this->mark','$this->model','$this->bodywork','$this->manufacturing','$this->enrollment','$this->license_plate','$this->paint','$this->cylinder','$this->transmission','$this->motor','$this->suspension','$this->service')";
+            $sql= "INSERT INTO vehicles(mark,model,bodywork,manufacturing,enrollment,license,paint,cylinder,transmission,motor,suspension,service,settlement)
+                VALUES ('$this->mark','$this->model','$this->bodywork','$this->manufacturing','$this->enrollment','$this->license_plate','$this->paint','$this->cylinder','$this->transmission','$this->motor','$this->suspension','$this->service','$this->settlement')";
             $result= $this->Conexion->query($sql);
             $this->Conexion->close();
             return $result;
@@ -162,13 +162,13 @@
             return ($this->service);
         }
 
-        /* public function setSettlement($settlement) {
+        public function setSettlement($settlement) {
             $this->settlement=$settlement;
         }
 
         public function getSettlement($settlement) {
             return ($this->settlement);
-        } */
+        }
 
         //Formulations
 

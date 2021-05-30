@@ -56,8 +56,21 @@
 
             <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="input_type_service" class="form-label">Type Service</label>
-                    <input type="text" class="form-control" name="type_service" id="type_service" placeholder="" />
+                    <label for="input_service" class="form-label">Service</label>
+                    <select
+                        class="form-select"
+                        name="service"
+                        id="service"
+                        aria-label="Default select example">
+                        <option selected>...select</option>
+
+                        <option value="1">Suspension</option>
+                        <option value="2">Swinging</option>
+                        <option value="3">Alignment</option>
+                        <option value="4">Rectification</option>
+                        <option value="5">Calibration</option>
+                        <option value="6">Leveling</option>
+                    </select>
                 </div>
 
                 <div class="mb-3">
@@ -78,8 +91,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="input_agreement" class="form-label">Agreement</label>
-                    <input type="text" class="form-control" name="agreement" id="agreement" placeholder="optional" />
+                    <label for="input_status" class="form-label">Status Condition</label>
+                    <input type="input" class="form-control" name="status" id="exampleFormControlInput1" placeholder="">
                 </div>
 
                 <div class="mb-3">
