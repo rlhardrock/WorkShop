@@ -2,6 +2,7 @@
 
 require '../models/connectionDatabase.php';
 
+$id = $_POST["id"];
 $mark = $_POST["mark"];
 $model = $_POST["model"];
 $bodywork = $_POST["bodywork"];
@@ -16,18 +17,18 @@ $suspension = $_POST["suspension"];
 $service = $_POST["service"];
 $settlement = $_POST["settlement"];
 
-$insert_query = "INSERT INTO vehicles(mark,model,bodywork,manufacturing,enrollment,license,paint,cylinder,transmission,motor,suspension,service,settlement) VALUES ('$mark','$model','$bodywork','$manufacturing','$enrollment','$license','$paint','$cylinder','$transmission','$motor','$suspension','$service','$settlement')";
+$update_query = "UPDATE vehicles SET mark=$mark',model='$model',bodywork='$bodywork',manufacturing='$manufacturing',enrollment='$enrollment',license='$license',paint='$paint',cylinder='$cylinder',transmission='$transmission',motor='$motor',suspension='$suspension',service='$service',settlement='$settlement' WHERE id_vehicle='$id' ";
 
-$result = mysqli_query($connection,$insert_query);
+$result = mysqli_query($connection,$update_query);
 
 if ($result) {
-    echo "<script>alert('Vehicle Added Successfully');
+    echo "<script>alert('Vehicle Updated Successfully');
     window.location='../views/dashboard.html'</script>";
 } else {
-    echo "<script>alert('Unregistered Vehicle, Try Again');
+    echo "<script>alert('Vehicle Not Updated, Try Again');
     window.history.go(-1)</script>";
 }
 
-
-
+mysqli_close($connection);
+?>
 

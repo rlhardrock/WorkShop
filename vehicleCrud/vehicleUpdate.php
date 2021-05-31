@@ -5,7 +5,7 @@ require "../models/connectionDatabase.php";
 $objConnection = Connect();
 $id = $_GET["id_vehicle"];
 $update_vehicle="SELECT * FROM vehicles WHERE id_vehicle='$id'";
-
+mysqli_close($connection);
 
 ?>
 
@@ -34,7 +34,7 @@ $update_vehicle="SELECT * FROM vehicles WHERE id_vehicle='$id'";
         <div class='row'>
             <div class="col-md-6">
                 <h3>FORM</h3>
-                <form method="POST" action="../krud/processUpdate.php">
+                <form method="POST" action="../krud/vehicleProcess.php">
 
                     <?php $result = mysqli_query($connection,$update_vehicle);
                     while($row= mysqli_fetch_assoc($result)) { ?>
