@@ -144,11 +144,7 @@ $vehicle = $resultVehicle->fetch_object();
                         <input type="text" class="form-control" name="service" id="service" value="<?php echo $vehicle->service?>" placeholder="">
                     </div>
 
-                    <!-- <div class="mb-3">
-                    <label for="input_settlement" class="form-label">Settlement</label>
-                    <input type="date" class="form-control" name="settlement" id="settlement" value="<!-- <?php echo $vehicle->settlement?>" --> placeholder="">
-                </div> -->
-
+                    
                     <div class="d-grid gap-2">
                         <button class="btn btn-success" type="Submit">Submit</button>
                     </div>

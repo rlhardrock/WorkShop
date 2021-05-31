@@ -33,8 +33,9 @@
     $motor = $_POST['motor'];
     $suspension = $_POST['suspension'];
     $service = $_POST['service'];
+    $settlement = $_POST['settlement'];
 
-    $superVehicle = new Vehicle($mark, $model, $bodywork, $manufacturing, $enrollment, $license, $paint, $cylinder, $transmission, $motor, $suspension, $service);
+    $superVehicle = new Vehicle($mark,$model,$bodywork,$manufacturing,$enrollment,$license,$paint,$cylinder, $transmission,$motor,$suspension,$service,$settlement);
 
     ?>
 
@@ -61,6 +62,7 @@
                         <th scope="col">Motor</th>
                         <th scope="col">Suspension</th>
                         <th scope="col">Service</th>
+                        <th scope="col">Settlement</th>
 
                     </tr>
                 </thead>
@@ -79,6 +81,7 @@
                         <td><?php echo $superVehicle->getMotor(); ?></td>
                         <td><?php echo $superVehicle->getSuspension(); ?></td>
                         <td><?php echo $superVehicle->getService(); ?></td>
+                        <td><?php echo $superVehicle->getSettlement(); ?></td>
                     </tr>
                 </tbody>
             </table>

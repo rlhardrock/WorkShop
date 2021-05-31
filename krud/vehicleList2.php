@@ -1,11 +1,13 @@
 <?php
 
-require "../models/connectionDatabase.php";
+require '../models/connectionDatabase.php';
 
-$objConnection = Connect();
-$sql = "SELECT * FROM vehicle";
-$result = $objConnection->query($sql);
-$AllVehicles = $result->num_rows;
+$objConnection = Connect(); //optional
+$vehicles = "SELECT * FROM vehicles";
+$result = mysqli_query($connection,$vehicles);
+$AllVehicles = mysqli_num_rows($result); //optional
+mysqli_free_result($result);
+mysqli_close($connection);
 
 ?>
 
@@ -18,7 +20,7 @@ $AllVehicles = $result->num_rows;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="../taller/views/style/styles.css">
+    <link rel="stylesheet" href="../style/styles.css">
 
     <title>REGISTERED VEHICLES</title>
 
@@ -26,12 +28,16 @@ $AllVehicles = $result->num_rows;
 
 <body>
     <div class='container-fluid'>
-        <h2>...</h2>
         <br>
+        <h2>
+            <?php   echo "All Registered Vehicles are: " . $AllVehicles;    ?>
+        </h2>
+        <br>
+
         <div class="col-md-10">
             <h3>RESULTS</h3>
-            <br>
-            <table class="table table-striped table-bordered table-hover">
+
+            <table class="table table-dark table-striped table-bordered table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -40,51 +46,46 @@ $AllVehicles = $result->num_rows;
                         <th scope="col">Bodywork</th>
                         <th scope="col">Manufacturing</th>
                         <th scope="col">Enrollment</th>
-                        <th scope="col">License Plate</th>
+                        <th scope="col">License</th>
                         <th scope="col">Paint</th>
                         <th scope="col">Cylinder</th>
                         <th scope="col">Transmission</th>
                         <th scope="col">Motor</th>
                         <th scope="col">Suspension</th>
                         <th scope="col">Service</th>
+                        <th scope="col">Settlement</th>
                         <th scope="col">Update!</th>
                         <th scope="col">Scrap!</th>
 
                     </tr>
 
-                    <?php
-                    echo "<br>";
-                    echo "All Registered Vehicles: " . $AllVehicles;
-                    echo "<br>";
-                    ?>
-
-                    <?php
-                    while ($vehicle = $result->fetch_object()) {
-                    ?>
+            <?php
+                $autos = mysqli_query($connection,$vehicles);
+                while ($row = mysqli_fetch_assoc($autos))
+            {?>
 
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td><?php echo $vehicle->mark ?></td>
-                        <td><?php echo $vehicle->model ?></td>
-                        <td><?php echo $vehicle->bodywork ?></td>
-                        <td><?php echo $vehicle->manufacturing ?></td>
-                        <td><?php echo $vehicle->enrollment ?></td>
-                        <td><?php echo $vehicle->license ?></td>
-                        <td><?php echo $vehicle->paint ?></td>
-                        <td><?php echo $vehicle->cylinder ?></td>
-                        <td><?php echo $vehicle->transmission ?></td>
-                        <td><?php echo $vehicle->motor ?></td>
-                        <td><?php echo $vehicle->suspension ?></td>
-                        <td><?php echo $vehicle->service ?></td>
-                        <td><a href="vehicleUpdate.php?id_vehicle=<?php echo $vehicle->id_vehicle ?>"></td>
+                        <td><?php echo $row["mark"]; ?></td>
+                        <td><?php echo $row["model"]; ?></td>
+                        <td><?php echo $row["bodywork"]; ?></td>
+                        <td><?php echo $row["manufacturing"]; ?></td>
+                        <td><?php echo $row["enrollment"]; ?></td>
+                        <td><?php echo $row["license"]; ?></td>
+                        <td><?php echo $row["paint"]; ?></td>
+                        <td><?php echo $row["cylinder"]; ?></td>
+                        <td><?php echo $row["transmission"]; ?></td>
+                        <td><?php echo $row["motor"]; ?></td>
+                        <td><?php echo $row["suspension"]; ?></td>
+                        <td><?php echo $row["service"]; ?></td>
+                        <td><?php echo $row["settlement"]; ?></td>
+                        <td><a href="../krud/vehicleUpdate2.php?id_vehicle= <?php echo $row["id_vehicle"];?>">U</a></td>
                         <td><a href="vehicleScrap"></td>
                     </tr>
                 </tbody>
-
             <?php
-                    }
-            ?>
+            }   mysqli_free_result($autos)?>
 
             </thead>
             </table>

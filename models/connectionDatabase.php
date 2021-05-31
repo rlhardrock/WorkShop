@@ -12,4 +12,3 @@
 
         echo $connection->host_info . "\n";  //optional
     }
-?>
