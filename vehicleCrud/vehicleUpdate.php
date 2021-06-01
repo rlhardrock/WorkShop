@@ -34,7 +34,7 @@ mysqli_close($connection);
         <div class='row'>
             <div class="col-md-6">
                 <h3>FORM</h3>
-                <form method="POST" action="../krud/vehicleProcess.php">
+                <form method="POST" action="../vehicleCrud/vehicleProcess.php">
 
                     <?php $result = mysqli_query($connection,$update_vehicle);
                     while($row= mysqli_fetch_assoc($result)) { ?>

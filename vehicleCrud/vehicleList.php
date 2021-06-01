@@ -80,8 +80,8 @@ mysqli_close($connection);
                         <td><?php echo $row["suspension"]; ?></td>
                         <td><?php echo $row["service"]; ?></td>
                         <td><?php echo $row["settlement"]; ?></td>
-                        <td><a href="../krud/vehicleUpdate2.php?id_vehicle= <?php echo $row["id_vehicle"];?>">U</a></td>
-                        <td><a href="vehicleScrap"></td>
+                        <td><a href="../vehicleCrud/vehicleUpdate.php?id_vehicle= <?php echo $row["id_vehicle"];?> "class="safety">U</a></td>
+                        <td><a href="../vehicleCrud/vehicleScrap.php?id_vehicle= <?php echo $row["id_vehicle"];?>" class="safety">S</a>"></td>
                     </tr>
                 </tbody>
             <?php
@@ -91,7 +91,7 @@ mysqli_close($connection);
             </table>
         </div>
     </div>
-
+    <script scr="../js/confirm.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>

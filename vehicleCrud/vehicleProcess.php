@@ -17,9 +17,9 @@ $suspension = $_POST["suspension"];
 $service = $_POST["service"];
 $settlement = $_POST["settlement"];
 
-$update_query = "UPDATE vehicles SET mark=$mark',model='$model',bodywork='$bodywork',manufacturing='$manufacturing',enrollment='$enrollment',license='$license',paint='$paint',cylinder='$cylinder',transmission='$transmission',motor='$motor',suspension='$suspension',service='$service',settlement='$settlement' WHERE id_vehicle='$id' ";
+$update_auto = "UPDATE vehicles SET mark=$mark',model='$model',bodywork='$bodywork',manufacturing='$manufacturing',enrollment='$enrollment',license='$license',paint='$paint',cylinder='$cylinder',transmission='$transmission',motor='$motor',suspension='$suspension',service='$service',settlement='$settlement' WHERE id_vehicle='$id' ";
 
-$result = mysqli_query($connection,$update_query);
+$result = mysqli_query($connection,$update_auto);
 
 if ($result) {
     echo "<script>alert('Vehicle Updated Successfully');
@@ -28,7 +28,7 @@ if ($result) {
     echo "<script>alert('Vehicle Not Updated, Try Again');
     window.history.go(-1)</script>";
 }
-
+mysqli_free_result($result);
 mysqli_close($connection);
 ?>
 
