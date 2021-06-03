@@ -17,7 +17,7 @@ $suspension = $_POST["suspension"];
 $service = $_POST["service"];
 $settlement = $_POST["settlement"];
 
-$update_auto = "UPDATE vehicles SET mark=$mark',model='$model',bodywork='$bodywork',manufacturing='$manufacturing',enrollment='$enrollment',license='$license',paint='$paint',cylinder='$cylinder',transmission='$transmission',motor='$motor',suspension='$suspension',service='$service',settlement='$settlement' WHERE id_vehicle='$id' ";
+$update_auto = "UPDATE vehicles SET mark=$mark',model='$model',bodywork='$bodywork',manufacturing='$manufacturing',enrollment='$enrollment',license='UPPER('$license')',paint='$paint',cylinder='$cylinder',transmission='$transmission',motor='$motor',suspension='$suspension',service='$service',settlement='$settlement' WHERE id_vehicle='$id' ";
 
 $result = mysqli_query($connection,$update_auto);
 
