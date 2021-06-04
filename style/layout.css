@@ -34,6 +34,12 @@ img{
     max-width: 100%;
 }
 
+
+
+
+
+
+
 .container-flex{
     display: flex;
     justify-content: space-between;
@@ -45,12 +51,11 @@ img{
 }
 
 .main-title{
-    color: steelblue;
-    /* padding: 0px 10px; */
+    color: #39ff14;
 }
 
 .icon-menu{
-    font-size: 2.5em;
+    font-size: 3.5em;
     color: red;
     display: block;
     padding: 5px 15px;
@@ -92,12 +97,13 @@ img{
 }
 
 .nav-social-item{
-    width: 35px;
-    height: 35px;
     padding: 35px;
     display: block;
     text-align: center;
     margin: 5px;
+    width: 100px;
+    height: 100px;
+    font-size: 2.2em;
 }
 
 /* Inclusion del JS */
@@ -107,7 +113,7 @@ img{
 }
 
 .banner{
-    background: url("../img/walls/wall39.jpg");
+    background: url("../img/system/system10.jpg");
     min-height: 550px;
     width: 100%;
     position: absolute;
@@ -173,11 +179,19 @@ img{
     font-weight: bold;
 }
 
+.design-container{
+
+}
+
 .design-perfor{
     margin: 20px 0;
 }
 
 .design-item{
+    position: relative;
+}
+
+.design-box{
     position: relative;
 }
 
@@ -215,6 +229,7 @@ img{
 }
 
 .design-img{
+    height: 420px;
     width: 100%;
 }
 
@@ -244,6 +259,10 @@ img{
 .automovil-race{
     text-align: center;
     color: midnightblue;
+}
+
+.box-container{
+
 }
 
 .box{
@@ -305,7 +324,7 @@ img{
 
 .footer-author{
     text-align: right;
-    color: white;
+    color: goldenrod;
     font-weight: bold;
     display: block;
 }
@@ -316,6 +335,7 @@ img{
 
 .foot-icon{
     padding: 25px;
+    font-size: 2.5em;
 }
 
 .contact-icon{
@@ -337,6 +357,7 @@ img{
 
 
 
+
 .fa-facebook-f{
     color: navy;
 }
@@ -344,7 +365,7 @@ img{
     color: midnightblue;
 }
 .fa-twitter{
-    color: royalblue;
+    color: Turquoise;
 }
 .fa-telegram{
     color: steelblue;
@@ -360,4 +381,77 @@ img{
 }
 .fa-discord{
     color: dimgray;
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .menu{
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        width: auto;
+        display: flex;
+        background: none;
+    }
+
+    .menu-item{
+        width: auto;
+    }
+
+    .icon-menu{
+        display: none;
+    }
+
+    .banner{
+        min-height: 550px;
+    }
+
+    .main{
+        margin-top: 400px;
+    }
+
+    .box{
+        justify-content: center;
+    }
+
+    .box-icon{
+        margin-right: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container{
+        margin: auto;
+    }
+
+    .design-perfor{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .design-item{
+        width: 50%;
+    }
+
+    .footer-m50d25{
+        width: 24%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main-title{
+        font-size: 3em;
+    }
+
+    .design-title{
+        font-size: 2.5em;
+    }
+
+    .container{
+        margin: auto;
+    }
 }
