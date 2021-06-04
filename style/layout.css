@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "space-ranger";
+    src: url("../style/font/spacerangerhalf.ttf");
+}
+
+@font-face {
+    font-family: "terminator";
+    src: url("../style/font/terminator.ttf");
+}
+
 *{
     box-sizing: border-box;
     font-family: serif;
@@ -7,8 +17,16 @@ body{
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family:'Times New Roman', Times, serif;
+h1, h2, h3{
+    font-family: "space-ranger";
+}
+
+h4, h5, h6{
+    font-family: "terminator";
+}
+
+p{
+    line-height: 30px;
 }
 
 img{
@@ -43,22 +61,27 @@ img{
     position: absolute;
     top: 70px;
     left: 0;
-    background: Gainsboro;
+    background: black;
     width: 100%;
     list-style: none;
     padding: 20px;
     margin: 0;
     font-size: 1.2em;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
 }
 
 .menu-item{
     padding: 14px;
     text-align: center;
-
+    padding: 10px;
+    margin: auto;
 }
 
 .menu-link{
-    color: dodgerblue;
+    color: gainsboro;
     text-decoration: none;
     position: relative;
 }
@@ -77,10 +100,14 @@ img{
     margin: 5px;
 }
 
+/* Inclusion del JS */
+.show{
+    opacity: 0.9;
+    visibility: visible;
+}
+
 .banner{
-    background: url("../img/wall9.jpg");
-    /* background-repeat: no-repeat;
-    background-size: cover; */
+    background: url("../img/walls/wall39.jpg");
     min-height: 550px;
     width: 100%;
     position: absolute;
@@ -159,36 +186,151 @@ img{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: ghostwhite;
-    font-weight: bold;
+    color: silver;
     font-size: 2.5em;
     text-align: center;
     width: 100%;
 }
 
 .design-title:before{
-    content: '';
-    width: 30%;
+    content: "";
+    width: 250px;
     position: absolute;
     top: -20px;
-    left: 35%;
-    height: 3px;
+    left: 50%;
+    height: 5px;
     background: #39ff14;
+    transform: translateX(-50%);
 }
 
-
 .design-title:after{
-    content: '';
-    width: 30%;
+    content: "";
+    width: 250px;
     position: absolute;
     top: 65px;
-    left: 35%;
-    height: 3px;
+    left: 50%;
+    height: 5px;
     background: #39ff14;
+    transform: translateX(-50%);
 }
 
 .design-img{
     width: 100%;
+}
+
+.automovil-container{
+    margin: 50px 0;
+}
+
+.automovil-title{
+    text-align: center;
+    color: navy;
+    padding: 25px;
+}
+
+.automovil-img{
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.automovil-road{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px 55px 20px 55px;
+}
+
+.automovil-race{
+    text-align: center;
+    color: midnightblue;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px
+}
+
+.box-icon{
+    color: royalblue;
+    width: 100px;
+    height: 100px;
+    border: 3px solid silver;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+.box-content{
+    width: 70%;
+}
+
+.box-icon:hover{
+    color: green;
+}
+
+.box-title{
+    color: orange;
+    margin: 0;
+    text-align: center;
+}
+
+.box-prgf{
+    color: DarkSlateBlue;
+    font-weight: bold;
+}
+
+.footer-main{
+    background: teal;
+    color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column{
+
+}
+
+.footer-title{
+    color: silver;
+    text-align: center;
+}
+
+.footer-author{
+    text-align: right;
+    color: white;
+    font-weight: bold;
+    display: block;
+}
+
+.footer-social{
+    text-align: center;
+}
+
+.foot-icon{
+    padding: 25px;
+}
+
+.contact-icon{
+
+}
+
+.footer-m50d25{
+    width: 48%;
+}
+
+.signature{
+    background: black;
+    color: ghostwhite;
+    text-align: center;
+    padding: 10px
 }
 
 
