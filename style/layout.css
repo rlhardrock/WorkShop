@@ -270,10 +270,20 @@ img{
     padding: 25px;
 }
 
-.automovil-img{
-    width: auto;
+.d-block{
+    height: 20%;
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     object-fit: cover;
-    margin: auto;
+    border-radius: 50%;
+    border: 1px solid ghostwhite;
+    animation: phoenix 4s infinite;
+}
+
+@keyframes phoenix {
+    50% {border: 15px solid silver;}
 }
 
 .automovil-road{
