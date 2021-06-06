@@ -1,0 +1,13 @@
+{
+    "cSpell.enableFiletypes": [
+        "!c",
+        "!cpp",
+        "!csharp",
+        "!go",
+        "!haskell",
+        "!rust",
+        "pdf",
+        "sql",
+        "vue"
+    ]
+}
