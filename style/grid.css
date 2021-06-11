@@ -1,0 +1,38 @@
+.redgrid{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:    "header header  header  header  header  header   header  header  header  header  header  header"
+                            "aside  aside   panel   panel   panel   panel    panel   panel   panel   panel   panel   panel"
+                            "aside  aside   panel   panel   panel   panel    panel   panel   panel   panel   panel   panel"
+                            "aside  aside   panel   panel   panel   panel    panel   panel   panel   panel   panel   panel"
+                            "aside  aside   footer  footer  footer  footer   footer  footer  footer  footer  footer  footer"
+                            "end  end   end   end   end   end    end   end   end   end   end   end";
+}
+
+.redgrid .header{
+    background: royalblue;
+    grid-area:  header;
+}
+
+.redgrid .aside{
+    background: yellowgreen;
+    grid-area: aside;
+}
+
+.redgrid .panel{
+    background: silver;
+    grid-area: panel;
+}
+
+.redgrid .footer{
+    background: orange;
+    grid-area: footer;
+}
+
+.redgrid .end{
+    background: green;
+    grid-area: end;
+}
+
