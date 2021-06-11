@@ -198,6 +198,47 @@ img{
     max-width: 100%;
 }
 
+.seeker{
+    position: absolute;
+    padding: 5px;
+}
+.seeker input{
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 50%;
+    transition: all 1.5s ease;
+}
+
+.seeker:hover input{
+    width: 250px;
+}
+
+.seeker input:focus{
+    width: 250px;
+}
+
+.push{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: indigo;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: ghostwhite;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
 /*============================*/
 /* All Schema */
 /*============================*/
