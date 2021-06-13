@@ -9,5 +9,10 @@
         "pdf",
         "sql",
         "vue"
+    ],
+    "cSpell.ignoreWords": [
+        "automovil",
+        "container",
+        "technicals"
     ]
 }
