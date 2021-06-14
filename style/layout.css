@@ -237,7 +237,25 @@ img{
     cursor: pointer;
 }
 
+/*============================*/
+/* Neon Loggin */
+/*============================*/
 
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn-neon:hover{
+    background: #39FF14;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px navy, 0 0 80px #a945c7;
+    transition-delay: 0.2s;
+}
 
 /*============================*/
 /* All Schema */
@@ -270,7 +288,7 @@ img{
     color: red;
     display: block;
     padding: 5px 15px;
-    cursor: cell;
+    cursor: pointer;
 }
 
 .menu{
@@ -315,20 +333,6 @@ img{
 /* Navigator */
 /*============================*/
 
-.nav-social{
-    display: flex;
-    justify-content: center;
-}
-
-.nav-social-item{
-    padding: 35px;
-    display: block;
-    text-align: center;
-    margin: 5px;
-    width: 100px;
-    height: 100px;
-    font-size: 2.2em;
-}
 
 /*============================*/
 /* Inclusion del JS */
@@ -345,7 +349,7 @@ img{
 
 .banner{
     background: url("../img/system/system10.jpg");
-    min-height: 550px;
+    height: 650px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -692,7 +696,9 @@ img{
 /*============================*/
 
 .footer-main{
-    background: teal;
+    background: #1a2a6c;
+    background: -webkit-linear-gradient(to bottom, #fdbb2d, #b21f1f, #1a2a6c);
+    background: linear-gradient(to bottom, #fdbb2d, #b21f1f, #1a2a6c);
     color: whitesmoke;
     padding: 20px;
     display: flex;
@@ -705,7 +711,7 @@ img{
 }
 
 .footer-title{
-    color: silver;
+    color: black;
     text-align: center;
 }
 
@@ -721,7 +727,7 @@ img{
 }
 
 .foot-icon{
-    padding: 25px;
+    padding: 15px;
     font-size: 2.5em;
 }
 
@@ -763,15 +769,10 @@ img{
 .fa-whatsapp-square{
     color: green;
 }
-.fa-instagram{
-    color: indigo;
-}
 .fa-youtube{
     color: crimson;
 }
-.fa-discord{
-    color: dimgray;
-}
+
 
 /*============================*/
 /* Media Config */
