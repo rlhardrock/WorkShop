@@ -237,6 +237,146 @@ img{
     cursor: pointer;
 }
 
+/* ========================= */
+/* Header */
+/* ========================= */
+
+.main-header{
+    display: block;
+    z-index: 999;
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #780206;
+    background: -webkit-linear-gradient(to bottom, #061161, #780206);
+    background: linear-gradient(to bottom, #061161, #780206);
+    transition: 0.5s;
+}
+
+.container-header{
+    height: 100%;
+    max-width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.logobusi-header{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 25px;
+    /* left: 0 */
+}
+
+.container-logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-business{
+    font-family: "space-ranger";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #39ff14;
+}
+
+.container-logo img{
+    width: 60px;
+    height: 60px;
+    align-items: center;
+}
+
+/*============================*/
+/* Navigator */
+/*============================*/
+
+.container-nav{
+    display: flex;
+    justify-content: space-evenly;
+    /* width: 100%; */
+    height: 100%;
+    margin: 10px 0;
+}
+
+/*============================*/
+/* Kosmonaut */
+/*============================*/
+
+.container-icon{
+    font-size: 3.5em;
+    color: red;
+    align-items: center;
+    display: none;
+}
+
+.container-icon:hover{
+    color: silver;
+    cursor: crosshair;
+}
+
+/*============================*/
+/* Menu */
+/*============================*/
+
+.main-nav{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu-nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.5s;
+    position: relative;
+}
+
+nav ul li a{
+    color: orange;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.select{
+    /* padding: 15px 20px;
+    border-radius: 30px;
+    border: 5px solid navy; */
+}
+
+.btn-nav{
+    margin: 20px 10px 40px 10px;
+    padding: 10px 15px;
+    list-style: none;
+    transition: all 0.3s;
+    width: max-content;
+}
+
+.btn-nav:hover{
+    background: navy;
+    border: 3px solid orange;
+    color: ghostwhite;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.item-nav a {
+    transition: 0.5s ease-out all;
+}
+
+.item-nav a:hover {
+    background: #1D2F3D;
+    color: #fff;
+    text-decoration: none;
+}
+
 /*============================*/
 /* Neon Loggin */
 /*============================*/
@@ -244,8 +384,8 @@ img{
 .btn-neon{
     position: relative;
     display: inline-block;
-    padding: 10px 20px 10px 20px;
-    margin-left: 10px;
+    padding: 10px 20px;
+    margin: 18px 25px;
     text-decoration: none;
     font-size: 16px;
     transition: 0.2s;
@@ -253,86 +393,12 @@ img{
 
 .btn-neon:hover{
     background: #39FF14;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px navy, 0 0 80px #a945c7;
+    box-shadow: 0 0 40px indigo, 0 0 40px navy, 0 0 80px indigo;
     transition-delay: 0.2s;
+    color: navy;
+    font-weight: bold;
+    border-radius: 25px;
 }
-
-/*============================*/
-/* All Schema */
-/*============================*/
-
-.container{
-    position: sticky;
-}
-
-.container-flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/*============================*/
-/* Main */
-/*============================*/
-
-.main-header{
-    padding: 0 15px;
-}
-
-.main-title{
-    color: #39ff14;
-}
-
-.icon-menu{
-    font-size: 3.5em;
-    color: red;
-    display: block;
-    padding: 5px 15px;
-    cursor: pointer;
-}
-
-.menu{
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background: black;
-    width: 100%;
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-    font-size: 1.2em;
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 1s;
-}
-
-.menu-item{
-    padding: 14px;
-    text-align: center;
-    padding: 10px;
-    margin: auto;
-}
-
-.menu-link{
-    color: gainsboro;
-    text-decoration: none;
-    position: relative;
-}
-
-.main-nav a {
-    transition: 0.5s ease-out all;
-}
-
-.main-nav a:hover {
-    background: #1D2F3D;
-    color: #fff;
-    text-decoration: none;
-}
-/*============================*/
-/* Navigator */
-/*============================*/
-
 
 /*============================*/
 /* Inclusion del JS */
@@ -349,19 +415,18 @@ img{
 
 .banner{
     background: url("../img/system/system10.jpg");
-    height: 650px;
+    height: 560px;
     width: 100%;
-    position: absolute;
+    display: block;
     top: 0;
     left: 0;
-    z-index: -999;
 }
 
 .banner-content{
     font-size: 1.5em;
     padding: 15px;
     width: 90%;
-    position: absolute;
+    position: relative;
     top: 60%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -376,13 +441,9 @@ img{
 /* Welcome */
 /*============================*/
 
-.main{
-    margin-top: 550px;
-}
-
 .welcome{
     text-align: center;
-    padding: 25px;
+    padding: 50px;
 }
 
 .welcome-title{
@@ -429,10 +490,6 @@ img{
 .design-item{
     position: relative;
 }
-
-/*============================*/
-/*  Effect Parallax */
-/*============================*/
 
 .design-container{
 
@@ -778,22 +835,49 @@ img{
 /* Media Config */
 /*============================*/
 
-@media screen and (min-width: 768px) {
-    .menu{
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        width: auto;
+@media screen and (max-width: 768px) {
+
+    .container-header{
+        max-width: 100%;
+    }
+
+    .container-logo{
+        visibility: hidden;
+    }
+
+    .container-icon{
         display: flex;
-        background: none;
+        padding: 5px 5px 5px 10px;
+        margin-left:10px;
     }
 
-    .menu-item{
-        width: auto;
+    .container-nav{
+        display: flex;
     }
 
-    .icon-menu{
-        display: none;
+    .main-nav{
+        display: inline-block;
+    }
+
+    .menu-nav{
+        flex-direction: column;
+        margin: 100px -100px;
+        transition: 0.5s;
+        opacity: 0;
+        visibility: visible;
+    }
+
+    .show{
+        opacity: 1;
+    }
+
+    .item-nav{
+        margin: 5px 0px;
+        background: royalblue;
+    }
+
+    .btn-neon{
+        margin-right: 25px;
     }
 
     .banner{
@@ -814,6 +898,7 @@ img{
 }
 
 @media (min-width: 1024px) {
+
     .container{
         margin: auto;
     }
@@ -833,6 +918,7 @@ img{
 }
 
 @media (min-width: 1260px) {
+
     .main-title{
         font-size: 3em;
     }

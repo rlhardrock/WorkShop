@@ -13,6 +13,8 @@
     "cSpell.ignoreWords": [
         "automovil",
         "container",
+        "kosmonaut",
         "technicals"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
